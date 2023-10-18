@@ -20,9 +20,11 @@ namespace testzkusebni
     /// </summary>
     public partial class MainWindow : Window
     {
+        Person person;
         public MainWindow()
         {
             InitializeComponent();
+            person = new Person("Pepa");
         }
         public double count(bool obsah,double r)
         {
@@ -126,6 +128,34 @@ namespace testzkusebni
             string color1 = "#" + Color1.Text;
             string color2 = "#" + Color2.Text;
             generuj(pocet, color1, color2);
+        }
+
+        private void Starnout_Click(object sender, RoutedEventArgs e)
+        {
+            person.starnout();            
+            load();
+        }
+        public void load()
+        {
+            Jmeno.Text = "";
+            Vek.Text = "";
+            Jmeno.Text = person.Name;
+            if (person.Vek==0)
+            {
+                Vek.Text = person.Name + " má " + person.Vek + " let";
+            }
+            else if (person.Vek>=99)
+            {
+                Vek.Text = person.Name + " umřel :(";
+            }
+            else
+            {
+                Vek.Text = person.Name + " má " + person.Vek + person.YearDef;
+            }
+        }
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            load();
         }
     }
 }
