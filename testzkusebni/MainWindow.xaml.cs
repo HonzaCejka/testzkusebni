@@ -26,6 +26,7 @@ namespace testzkusebni
             InitializeComponent();
             person = new Person("Pepa");
         }
+        //objem/obsah
         public double count(bool obsah,double r)
         {
             double vysledek;
@@ -61,6 +62,7 @@ namespace testzkusebni
                 
             }
         }
+        //barvy
         private void generuj(int pocet, string color1,string color2)
         {            
             for (int i = 0; i < pocet; i++)
@@ -111,7 +113,7 @@ namespace testzkusebni
                 }
             }            
         }
-
+//Pepa
         private void generate_Click(object sender, RoutedEventArgs e)
         {
             vystup.RowDefinitions.Clear();
