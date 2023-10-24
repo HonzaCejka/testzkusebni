@@ -113,7 +113,7 @@ namespace testzkusebni
                 }
             }            
         }
-//Pepa
+
         private void generate_Click(object sender, RoutedEventArgs e)
         {
             vystup.RowDefinitions.Clear();
@@ -131,7 +131,7 @@ namespace testzkusebni
             string color2 = "#" + Color2.Text;
             generuj(pocet, color1, color2);
         }
-
+//Pepa
         private void Starnout_Click(object sender, RoutedEventArgs e)
         {
             person.starnout();            
